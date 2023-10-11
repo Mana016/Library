@@ -17,7 +17,7 @@ function toggleRead(index) {
 }
 
 function render() {
-    let libraryEl = document.querySelector("#library");
+    let libraryEl = document.getElementById("#library");
     libraryEl.innerHTML = "";
     for (let i = 0; i < myLibrary.length; i++) {
         let book = myLibrary[i];
@@ -54,13 +54,13 @@ function addBookToLibrary() {
     render();
 }
 
-let newBookBtn = document.querySelector("#new-book-btn");
+let newBookBtn = document.getElementById("#new-book-btn");
 newBookBtn.addEventListener("click", function() {
-    let newBookForm = document.querySelector("#new-book-form");
+    let newBookForm = document.getElementById("#new-book-form");
     newBookForm.style.display = "block";
 })
 
-document.querySelector("#new-book-form").addEventListener("submit", function(event){
+document.getElementById("#new-book-form").addEventListener("submit", function(event){
     event.preventDefault();
     addBookToLibrary();
 })
